@@ -13,7 +13,3 @@ FOUNDATION_EXPORT double UsingVersionNumber;
 
 //! Project version string for Using.
 FOUNDATION_EXPORT const unsigned char UsingVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <Using/PublicHeader.h>
-
-

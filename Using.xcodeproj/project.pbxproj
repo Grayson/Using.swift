@@ -10,6 +10,9 @@
 		1D8CE7B71CDC2CDE00B035B2 /* Using.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8CE7B61CDC2CDE00B035B2 /* Using.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D8CE7BE1CDC2CDE00B035B2 /* Using.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8CE7B31CDC2CDE00B035B2 /* Using.framework */; };
 		1D8CE7C31CDC2CDE00B035B2 /* UsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CE7C21CDC2CDE00B035B2 /* UsingTests.swift */; };
+		1D8CE7CE1CDC2CF300B035B2 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CE7CD1CDC2CF300B035B2 /* Disposable.swift */; };
+		1D8CE7D01CDC2D2800B035B2 /* Disposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CE7CF1CDC2D2800B035B2 /* Disposer.swift */; };
+		1D8CE7D21CDC2DCD00B035B2 /* Using.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CE7D11CDC2DCD00B035B2 /* Using.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		1D8CE7BD1CDC2CDE00B035B2 /* UsingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8CE7C21CDC2CDE00B035B2 /* UsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTests.swift; sourceTree = "<group>"; };
 		1D8CE7C41CDC2CDE00B035B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D8CE7CD1CDC2CF300B035B2 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		1D8CE7CF1CDC2D2800B035B2 /* Disposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposer.swift; sourceTree = "<group>"; };
+		1D8CE7D11CDC2DCD00B035B2 /* Using.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Using.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				1D8CE7B61CDC2CDE00B035B2 /* Using.h */,
 				1D8CE7B81CDC2CDE00B035B2 /* Info.plist */,
+				1D8CE7CD1CDC2CF300B035B2 /* Disposable.swift */,
+				1D8CE7CF1CDC2D2800B035B2 /* Disposer.swift */,
+				1D8CE7D11CDC2DCD00B035B2 /* Using.swift */,
 			);
 			path = Using;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8CE7D21CDC2DCD00B035B2 /* Using.swift in Sources */,
+				1D8CE7D01CDC2D2800B035B2 /* Disposer.swift in Sources */,
+				1D8CE7CE1CDC2CF300B035B2 /* Disposable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +319,7 @@
 		1D8CE7C81CDC2CDE00B035B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -319,12 +332,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fromconcentratesoftware.Using;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1D8CE7C91CDC2CDE00B035B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -381,6 +396,7 @@
 				1D8CE7C91CDC2CDE00B035B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8CE7CA1CDC2CDE00B035B2 /* Build configuration list for PBXNativeTarget "UsingTests" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +405,7 @@
 				1D8CE7CC1CDC2CDE00B035B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
