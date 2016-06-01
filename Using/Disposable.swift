@@ -6,7 +6,7 @@
 //  Copyright © 2016 From Concentrate Software. All rights reserved.
 //
 
-protocol Disposable {
+public protocol Disposable {
 	func dispose()
 }
 

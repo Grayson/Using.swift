@@ -6,11 +6,11 @@
 //  Copyright © 2016 From Concentrate Software. All rights reserved.
 //
 
-final class Disposer : Disposable {
+public final class Disposer : Disposable {
 	private let action: () -> ()
 	private var isDisposed = false
 
-	init(action: () -> ()) {
+	public init(action: () -> ()) {
 		self.action = action
 	}
 
@@ -18,7 +18,7 @@ final class Disposer : Disposable {
 		dispose()
 	}
 
-	func dispose() {
+	public func dispose() {
 		guard !isDisposed else { return }
 		action()
 	}
